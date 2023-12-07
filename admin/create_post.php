@@ -24,7 +24,7 @@ include_once('../components/admin/header.php');
             <hr>
             <div class="card">
                 <div class="card-body">
-                    <form>
+                    <form action="requests/request_create_post.php" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="title">Título da Postagem</label>
                             <input type="text" class="form-control" id="title" name="title" placeholder="Insira o título da postagem">
@@ -35,7 +35,7 @@ include_once('../components/admin/header.php');
                         </div>
                         <div class="form-group">
                             <label for="image">Imagem da Postagem</label>
-                            <input type="file" class="form-control-file" id="image" name="image">
+                            <input type="file" class="form-control-file" id="image" name="image" accept="image/*">
                         </div>
                         <button type="submit" class="btn btn-primary">Publicar</button>
                     </form>

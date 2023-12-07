@@ -1,4 +1,5 @@
 <?php
+
 function connectDatabase(){
     $server = 'localhost';
     $user = 'root';
@@ -13,5 +14,3 @@ function connectDatabase(){
 
     return $connection;
 }
-
-?>
