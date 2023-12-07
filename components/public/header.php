@@ -56,14 +56,25 @@ include_once('helpers/isActivePage.php');
             </a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline my-2 my-lg-0"> 
+          <?php
+          if(!isset($_SESSION['user_id'])){
+          
+        
+          ?>
           <a class="btn btn-outline-color1 my-2 my-sm-0" href="login.php">
             Login
           </a>
           <a class="btn btn-color1 my-2 my-sm-0 text-light ml-2" href="register.php">
             Cadastre-se
           </a>
-
+          <?php 
+          }else{
+          ?>
+        <a class="btn btn-color1 my-2 my-sm-0 text-light ml-2" href="admin/index.php">
+          Dashboard
+        </a>
+          <?php }?>
 
         </form>
       </div>

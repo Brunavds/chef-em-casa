@@ -30,10 +30,6 @@ include_once('../components/admin/header.php');
                             <input type="text" class="form-control" id="title" name="title" placeholder="Insira o título da postagem">
                         </div>
                         <div class="form-group">
-                            <label for="short_description">Descrição Curta (opcional)</label>
-                            <textarea class="form-control" id="short_description" name="short_description" rows="2" placeholder="Uma descrição curta da postagem"></textarea>
-                        </div>
-                        <div class="form-group">
                             <label for="content">Conteúdo da Postagem</label>
                             <textarea class="form-control" id="content" name="content" rows="6" placeholder="Escreva o conteúdo da postagem"></textarea>
                         </div>
