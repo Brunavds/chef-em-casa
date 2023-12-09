@@ -5,7 +5,7 @@ function connectDatabase(){
     $server = 'localhost';
     $user = 'root';
     $password = '';
-    $database = 'airton'; //aqui deve ficar o nome do banco que foi criado
+    $database = 'banco_de_dados'; //aqui deve ficar o nome do banco que foi criado
 
     $connection = mysqli_connect('$server', '$user', '$password', '$database');
 
