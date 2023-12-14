@@ -134,7 +134,7 @@ include_once(__DIR__ . '/components/public/header.php');
         compartilhar suas próprias criações.</p>
       <div class="row justify-content-center">
         <div class="col-md-6">
-          <a href="cadastro.php" class="btn btn-light btn-lg btn-block">Cadastre-se</a>
+          <a href="create_user.php" class="btn btn-light btn-lg btn-block">Cadastre-se</a>
         </div>
         <div class="col-md-6">
           <a href="login.php" class="btn btn-outline-light btn-lg btn-block">Login</a>
