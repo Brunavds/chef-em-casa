@@ -42,7 +42,7 @@ $user_image = $row['image'];
             </div>
             <div class="card mt-3">
                 <div class="card-body">
-                    <form action="requests/atualizar_perfil.php" method="post" enctype="multipart/form-data">
+                    <form action="requests/request_atualizar_perfil.php" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="image">Foto de Perfil</label>
                             <input type="file" class="form-control-file" id="image" name="image">
