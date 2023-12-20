@@ -7,7 +7,17 @@ $pageInfo = array(
 
 include_once('../components/admin/header.php');
 
-include_once('../components/admin/header.php');
+//Seleciona todos os usuarios cadastrados e mostra na tela
+$query= "SELECT id, name, email, about, created_at FROM users;";
+
+
+$result = mysqli_query($connection, $query);
+
+$user = array();
+
+if(mysqli_num_rows($result) > 0){
+    $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
 ?>
 
 <!-- Conteúdo do dashboard -->
@@ -34,15 +44,18 @@ include_once('../components/admin/header.php');
                             <tr>
                                 <th>Nome</th>
                                 <th>Email</th>
-                                <th>Data de Registro</th>
+                                <th>Sobre</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody>
+                        <?php foreach($users as $user){ ?>
                             <tr>
-                                <td>João Silva</td>
-                                <td>joao@gmail.com</td>
-                                <td>01/01/2023</td>
+                            <td><?php echo $user['name']; ?></td>
+                            <td><?php echo $user['email']; ?></td>
+                            <td><?php echo $user['about']; ?></td>
+                            <?php echo date('d/m/Y', strtotime($user['created_at']) ); ?></td>
+                               
                                 <td>
                                     <div class="dropdown">
                                         <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -66,6 +79,7 @@ include_once('../components/admin/header.php');
                                 </td>
                             </tr>
                             <!-- Adicione mais linhas conforme necessário -->
+                            <?php } ?>
                         </tbody>
                     </table>
                 </div>
